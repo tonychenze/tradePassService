@@ -1,0 +1,12 @@
+{
+  "description": "USD-GBP",
+  "type": "FX",
+  "utilisation": 90,
+  "exposure": 9,
+  "limit": 10,
+  "mrm": "FX Onwer",
+  "business": "Fx Team",
+  "tick": 0.5,
+  "breach": 1.2,
+  "currency": "$"
+}
