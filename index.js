@@ -16,7 +16,7 @@ mongoose
 const port = process.env.PORT || 3500;
 
 //routing for the limits
-app.use("/fxlimits", fxLimit);
+app.use("/api/fxlimits", fxLimit);
 
 app.listen(port, () => {
   console.log(`Starting on the port ${port}`);

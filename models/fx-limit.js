@@ -34,7 +34,7 @@ const FxLimit = mongoose.model(
     },
     business: {
       type: String,
-      default: "FX-BSN"
+      default: "FX-BUSINESS"
     },
     tick: {
       type: Number,
@@ -56,8 +56,7 @@ function validateFX(fx) {
   const fxSchema = {
     description: Joi.string()
       .min(5)
-      .max(50)
-      .required(),
+      .max(50),
     type: Joi.string()
       .min(1)
       .max(50),
