@@ -24,18 +24,12 @@ router.get("/:limitId", async (req, res) => {
 
 router.post("/", async (req, res) => {
   const result = validate(req.body);
-  console.log("result:", result);
-  console.log(req.body);
   if (result.error)
     return res.status(400).send(result.error.details[0].message);
-
+  
   const newLimit = new FxLimit(req.body);
-  try {
-    await newLimit.save();
-    return res.status(200).send(newLimit);
-  } catch (error) {
-    return res.status(500).send(error.message);
-  }
+  await newLimit.save();
+  return res.status(200).send(newLimit);
 });
 
 router.put("/:limitId", async (req, res) => {
